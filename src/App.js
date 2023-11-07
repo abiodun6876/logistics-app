@@ -11,6 +11,7 @@ import AboutUs from './components/AboutUs';
 import Register from './components/Register';
 import Login from './components/Login';
 import WelcomeSreen from './components/WelcomeSreen'; 
+import ForgetPassword from './components/ForgetPassword';
 
 
 function App(){
@@ -31,6 +32,7 @@ function App(){
     <Route path="/register" element={<Register/>}/>
     <Route path="/login" element={<Login/>}/>
     <Route path="/welcomeSreen" element={<WelcomeSreen/>}/>
+    <Route path="/forgetPassword" element={<ForgetPassword/>}/>
   </Routes>
 
  
