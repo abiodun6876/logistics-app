@@ -1,0 +1,28 @@
+
+body {
+    overflow-x: hidden;
+  }
+  
+.about-us-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap between columns */
+    margin-bottom: auto;
+  }
+  
+  .about-us-column {
+    flex: 1; /* Adjust this value as needed to control the column width */
+    padding: 20px;
+    border: 5px dotted #bbb; /* Dotted border */
+    margin-bottom: auto;
+  }
+  
+  /* To display 2 sub-headings on each row */
+  @media (max-width: 768px) {
+    .about-us-column {
+      flex: 100%; /* Stacking columns on mobile */
+      flex-direction:row;
+     
+    }
+  }
+  

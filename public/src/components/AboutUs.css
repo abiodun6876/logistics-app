@@ -1,0 +1,148 @@
+
+  
+  /* Rest of your existing CSS for the "about-us" section */
+  .about-us {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+
+  .about-us-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;;
+  }
+  
+  /* Media Query for Mobile */
+  @media (max-width: 768px) {
+    .about-us-left {
+      flex: 0 0 200px; /* Adjust the width as needed for mobile */
+    }
+  }
+  
+  
+  .overview {
+    font-size: 35px;
+
+   font-family: "Rubik";
+   font-weight: 600;
+   color: rgba(0, 0, 0, 1);
+   
+  }
+
+  
+  .overview ::before, .overview ::after {
+    flex: 1;
+    content: '';
+    padding: 3px;
+    background-color: rgba(255, 174, 10, 1);
+    margin: 5px;
+  }
+  
+  
+  .small-pic {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #FFB82B;
+    border-radius: 50%;
+  }
+  
+  .big-pic {
+    max-width: 100%;
+    height: auto;
+    
+    bottom: 0;
+    right: 0;
+    border: 5px solid #FFB82B;
+    border-radius: 50%;
+  }
+  
+  .learn-more-button {
+    background-color: #FFB82B;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+
+  .learn-more-button::after {
+    content: ' ➞'; /* Unicode for a right arrow character */
+    display: inline-block;
+    margin-left: 5px; /* Adjust the spacing between the text and arrow */
+  }
+  
+  .about-us-right {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #F5F5F5;
+    border: 1px solid #E6E6E6;
+    border-radius: 5px;
+    
+  }
+  
+  .about-us-right p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    margin: 15px 0;
+
+  }
+  
+  .buttons-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 15px 0;
+    padding: 10px;;
+  }
+
+
+ 
+  
+  .buttons-row button {
+    flex: 1;
+    background-color: #FFB82B;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .learn-more-button:last-child {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+  
+  /* Media Query for Mobile */
+  @media (max-width: 768px) {
+    .about-us {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+  
+    .small-pic,
+    .big-pic {
+      width: 80%;
+    }
+  
+    .learn-more-button,
+    .buttons-row button {
+      font-size: 14px;
+    }
+  }
+  

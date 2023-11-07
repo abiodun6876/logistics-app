@@ -1,0 +1,118 @@
+/* Default styles for larger screens */
+.register-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .loginImage {
+    width: 646px;
+    height: 481.35px;
+    top: 220px;
+    left: 46px;
+  }
+
+  /* Media query for smaller screens (e.g., mobile devices) */
+@media (max-width: 768px) {
+    .loginImage {
+      width: 100%; /* Make the image responsive to the screen width */
+      height: auto; /* Maintain image aspect ratio */
+      top: 0; /* Adjust the top positioning as needed */
+      left: 0; /* Adjust the left positioning as needed */
+    }
+  }
+  
+  .content1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px;
+  }
+  
+  .welcome_to {
+    font-size: 48px;
+    font-family: "Nunito";
+    font-weight: 800;
+    color: rgba(0, 0, 0, 1);
+  }
+  
+  .register {
+    font-size: 32px;
+    font-family: "Nunito";
+    font-weight: 700;
+    color: rgba(0, 0, 0, 1);
+  }
+  
+  .log_in_to {
+    font-size: 15px;
+    font-family: "Nunito";
+    font-weight: 400;
+    color: rgba(69, 69, 69, 1);
+    background: #FFEFCE;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  .sign_up_an {
+    font-size: 15px;
+    font-family: "Nunito";
+    font-weight: 400;
+    color: rgba(69, 69, 69, 1);
+    background: #FFEFCE;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  /* Add custom right arrow icon to the paragraphs using pseudo-elements */
+  .sign_up_an::after,
+  .log_in_to::after {
+    content: '▶.';
+    margin-left: 5px;
+    
+    font-size: 20px;
+    color: rgba(0, 0, 0, 1);
+  }
+  
+  .login {
+    font-size: 32px;
+    font-family: "Nunito";
+    font-weight: 700;
+    color: rgba(0, 0, 0, 1);
+  }
+  
+  .loginImage {
+    width: 646px;
+    height: 481.35px;
+  }
+  
+  /* Media query for smaller screens (e.g., mobile devices) */
+  @media (max-width: 768px) {
+    .register-container {
+      flex-direction: column; /* Stack items vertically for smaller screens */
+      align-items: center;
+    }
+  
+    .loginImage {
+      width: 100%; /* Make the image responsive to the screen width */
+      height: auto; /* Maintain image aspect ratio */
+      top: 0;
+      left: 0;
+    }
+  
+    .content {
+      margin: 20px;
+      text-align: center; /* Center text content for smaller screens */
+    }
+  
+    .welcome_to {
+      font-size: 36px; /* Reduce font size for smaller screens */
+    }
+  
+    .register, .login {
+      font-size: 24px; /* Reduce font size for smaller screens */
+    }
+  
+    .sign_up_an, .log_in_to {
+      font-size: 12px; /* Reduce font size for smaller screens */
+    }
+  }
+  
