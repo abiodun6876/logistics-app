@@ -103,35 +103,40 @@
 
 
 
-  /* Media query for smaller screens (e.g., mobile devices) */
-  @media (max-width: 768px) {
-    .register-container {
-      flex-direction: column; /* Stack items vertically for smaller screens */
-      align-items: center;
-    }
-  
-    .loginImage {
-      width: 100%; /* Make the image responsive to the screen width */
-      height: auto; /* Maintain image aspect ratio */
-      top: 0;
-      left: 0;
-    }
-  
-    .content {
-      margin: 20px;
-      text-align: center; /* Center text content for smaller screens */
-    }
-  
-    .welcome_to {
-      font-size: 36px; /* Reduce font size for smaller screens */
-    }
-  
-    .register, .login {
-      font-size: 24px; /* Reduce font size for smaller screens */
-    }
-  
-    .sign_up_an, .log_in_to {
-      font-size: 12px; /* Reduce font size for smaller screens */
-    }
+ /* Media query for smaller screens (e.g., mobile devices) */
+@media (max-width: 768px) {
+  .register-container {
+    flex-direction: column; /* Stack items vertically for smaller screens */
+    align-items: center;
   }
-  
+
+  .loginImage {
+    width: 100%; /* Make the image responsive to the screen width */
+    height: auto; /* Maintain image aspect ratio */
+    top: 0;
+    left: 0;
+  }
+
+  .content1 {
+    margin: 20px;
+    text-align: center; /* Center text content for smaller screens */
+  }
+
+  .welcome_to {
+    font-size: 36px; /* Reduce font size for smaller screens */
+  }
+
+  .register, .login {
+    font-size: 24px; /* Reduce font size for smaller screens */
+    margin: 10px; /* Adjust margin as needed */
+    justify-content: center;
+  }
+
+  .log_in_to, .sign_up_an {
+    font-size: 12px; /* Reduce font size for smaller screens */
+    background: #FFEFCE;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%; /* Make the elements full width */
+  }
+}
