@@ -137,7 +137,7 @@
     background: #FFEFCE;
     border-radius: 10px;
     padding: 10px;
-    width: 70%; /* Make the elements full width */
+    width: 100%; /* Make the elements full width */
   }
 
   /* Remove the arrow icons for smaller screens */
