@@ -112,8 +112,7 @@
   .loginImage {
     width: 100%; /* Make the image responsive to the screen width */
     height: auto; /* Maintain image aspect ratio */
-    top: 0;
-    left: 0;
+    
     justify-content: center;
   }
 
