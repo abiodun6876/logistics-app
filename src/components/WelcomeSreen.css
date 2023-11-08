@@ -11,15 +11,7 @@
     left: 46px;
   }
 
-  /* Media query for smaller screens (e.g., mobile devices) */
-@media (max-width: 768px) {
-    .loginImage {
-      width: 100%; /* Make the image responsive to the screen width */
-      height: auto; /* Maintain image aspect ratio */
-      top: 0; /* Adjust the top positioning as needed */
-      left: 0; /* Adjust the left positioning as needed */
-    }
-  }
+
   
   .content1 {
     display: flex;
@@ -109,10 +101,11 @@
     align-items: center;
   }
 
-  .loginImage {
+ .loginImage {
     width: 100%; /* Make the image responsive to the screen width */
     height: auto; /* Maintain image aspect ratio */
-     justify-items: center;
+    display: flex; /* Center horizontally and vertically */
+    align-items: center;
     justify-content: center;
   }
 
