@@ -77,10 +77,7 @@ function ForgetPassword() {
 
 
 
-<p className='Login-Sub-text' style={{justifyContent:'center',textAlign: 'center',}}>Can not remember your password?</p>
-<Link to="/resetpassword"  style={{textDecoration:'none',color:'black'}}>
-      <p className='Login-Sub-text' style={{justifyContent:'center',textAlign: 'center',color:'orange'}}>Reset here</p>
-</Link>
+
         <div style={{ display: 'flex', justifyContent: 'center', margin: '20px' }}>
           <button type="submit" className="next-button" onClick={handleFormSubmit}>
             Login
