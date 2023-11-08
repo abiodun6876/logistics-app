@@ -114,6 +114,7 @@
     height: auto; /* Maintain image aspect ratio */
     top: 0;
     left: 0;
+    justify-content: center;
   }
 
   .content1 {
