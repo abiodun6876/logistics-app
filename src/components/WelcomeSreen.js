@@ -22,10 +22,10 @@ function WelcomeSreen() {
         </p>
          
           
-        <p className="sign_up_an">
+        <p className="sign_up_an1">
         <div className="link-container">
     <Link to="/register" style={{ textDecoration: 'none', color: 'black' }}>
-  <p className="register">Register</p>
+  <p className="register1">Register</p>
   
       Sign up and begin using PeakReach
       <br/> 
@@ -34,10 +34,10 @@ function WelcomeSreen() {
   </div>
 </p>
 
-<p className="log_in_to">
+<p className="log_in_to1">
 <div className="link-container">
     <Link to="/login" style={{ textDecoration: 'none', color: 'black' }}>
-  <p className="login">Login</p>
+  <p className="login1">Login</p>
   
       Log in to access PeakReach
       <br/> 
