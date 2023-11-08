@@ -35,7 +35,7 @@
     color: rgba(0, 0, 0, 1);
   }
   
-  .register {
+  .register1 {
     font-size: 32px;
     font-family: "Nunito";
     font-weight: 400;
@@ -43,7 +43,7 @@
     margin: 10x;
   }
   
-  .log_in_to {
+  .log_in_to1 {
     font-size: 15px;
     font-family: "Nunito";
     font-weight: 400;
@@ -55,7 +55,7 @@
     margin: 10x;
   }
   
-  .sign_up_an {
+  .sign_up_an1 {
     font-size: 15px;
     font-family: "Nunito";
     font-weight: 400;
@@ -70,8 +70,8 @@
   }
   
   /* Add custom right arrow icon to the paragraphs using pseudo-elements */
-  .register::after,
-  .login::after {
+  .register1::after,
+  .login1::after {
     content: '▶.';
     margin-left: 5px;
     float: right;
@@ -79,7 +79,7 @@
     color: rgba(0, 0, 0, 1);
   }
   
-  .login {
+  .login1 {
     font-size: 32px;
     font-family: "Nunito";
     font-weight: 400;
@@ -102,8 +102,7 @@
   
 
 
-
- /* Media query for smaller screens (e.g., mobile devices) */
+/* Media query for smaller screens (e.g., mobile devices) */
 @media (max-width: 768px) {
   .register-container {
     flex-direction: column; /* Stack items vertically for smaller screens */
@@ -126,19 +125,17 @@
     font-size: 36px; /* Reduce font size for smaller screens */
   }
 
-  .register, .login {
+  .register1, .login1 {
     font-size: 24px; /* Reduce font size for smaller screens */
     margin: 10px; /* Adjust margin as needed */
     justify-content: center;
   }
 
-  .log_in_to, .sign_up_an {
-  font-size: 12px; /* Reduce font size for smaller screens */
-  background: #FFEFCE;
-  border-radius: 10px;
-  padding: 10px;
-  width: 90%; /* Adjust the width based on your design and content */
- justify-content: center;
-}
-
+  .log_in_to1, .sign_up_an1 {
+    font-size: 12px; /* Reduce font size for smaller screens */
+    background: #FFEFCE;
+    border-radius: 10px;
+    padding: 10px;
+    width: 70%; /* Make the elements full width */
+  }
 }
