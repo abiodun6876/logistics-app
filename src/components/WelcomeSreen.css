@@ -119,13 +119,13 @@
   }
 
   .register, .login {
-    font-size: 24px; /* Reduce font size for smaller screens */
+    font-size: 30px; /* Reduce font size for smaller screens */
     margin: 10px; /* Adjust margin as needed */
     justify-content: center;
   }
 
   .log_in_to, .sign_up_an {
-    font-size: 12px; /* Reduce font size for smaller screens */
+    font-size: 16px; /* Reduce font size for smaller screens */
     background: #FFEFCE;
     border-radius: 10px;
     padding: 10px;
