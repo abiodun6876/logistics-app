@@ -20,27 +20,32 @@ function WelcomeSreen() {
         <p className="welcome_to">
           Welcome to PeakReach Logistics
         </p>
-        <div className="d-flex gap-3">
-          <p className="register">Register</p>
-          
          
-        </div>
+          
         <p className="sign_up_an">
-        <Link to="/register" style={{textDecoration:'none',color:'black'}}>
-          
-       
-          Sign up and begin using PeakReach Logistics for seamless deliveries
-          </Link>
-        </p>
-        <div className="d-flex gap-3">
-          <p className="login">Login</p>
-         
-        </div>
-        <p className="log_in_to">
-        <Link to="/login"  style={{textDecoration:'none',color:'black'}}>
-          Log in to access PeakReach Logistics for swift deliveries
-          </Link>
-        </p>
+  <p className="register">Register</p>
+  <div className="link-container">
+    <Link to="/register" style={{ textDecoration: 'none', color: 'black' }}>
+      Sign up and begin using PeakReach
+      <br/> 
+      Logistics for seamless deliveries
+    </Link>
+  </div>
+</p>
+
+<p className="log_in_to">
+  <p className="login">Login</p>
+  <div className="link-container">
+    <Link to="/login" style={{ textDecoration: 'none', color: 'black' }}>
+      Log in to access PeakReach
+      <br/> 
+      Logistics for swift deliveries
+    </Link>
+  </div>
+</p>
+
+
+      
       </div>
     </div>
   );

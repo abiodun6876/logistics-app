@@ -38,7 +38,7 @@
   .register {
     font-size: 32px;
     font-family: "Nunito";
-    font-weight: 700;
+    font-weight: 400;
     color: rgba(0, 0, 0, 1);
   }
   
@@ -50,6 +50,8 @@
     background: #FFEFCE;
     border-radius: 10px;
     padding: 10px;
+    width: 100%;
+    
   }
   
   .sign_up_an {
@@ -60,14 +62,17 @@
     background: #FFEFCE;
     border-radius: 10px;
     padding: 10px;
+    width: 100%;
+    
+
   }
   
   /* Add custom right arrow icon to the paragraphs using pseudo-elements */
-  .sign_up_an::after,
-  .log_in_to::after {
+  .register::after,
+  .login::after {
     content: '▶.';
     margin-left: 5px;
-    
+    float: right;
     font-size: 20px;
     color: rgba(0, 0, 0, 1);
   }
@@ -75,7 +80,7 @@
   .login {
     font-size: 32px;
     font-family: "Nunito";
-    font-weight: 700;
+    font-weight: 400;
     color: rgba(0, 0, 0, 1);
   }
   
@@ -84,6 +89,15 @@
     height: 481.35px;
   }
   
+  .link-container {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+  
+
+
+
   /* Media query for smaller screens (e.g., mobile devices) */
   @media (max-width: 768px) {
     .register-container {

@@ -51,15 +51,7 @@
   
   
   
-  /* Add custom right arrow icon to the paragraphs using pseudo-elements */
-  .sign_up_an::after,
-  .log_in_to::after {
-    content: '▶.';
-    margin-left: 5px;
-    
-    font-size: 20px;
-    color: rgba(0, 0, 0, 1);
-  }
+  
   
   .login {
     font-size: 32px;
