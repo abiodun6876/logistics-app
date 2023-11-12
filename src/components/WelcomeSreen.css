@@ -62,14 +62,16 @@
   }
   
   /* Add custom right arrow icon to the paragraphs using pseudo-elements */
-  .register::after,
-  .login::after {
-    content: '▶.';
-    margin-left: 5px;
-    float: right;
-    font-size: 20px;
-    color: rgba(0, 0, 0, 1);
-  }
+.register::after,
+.login::after {
+  content: '›'; /* or '&#9654;' */
+  margin-left: 5px;
+  float: right;
+  font-size: 20px;
+  font-weight: bold; /* Add this line for bold */
+  color: rgba(0, 0, 0, 1);
+}
+
   
   .login {
     font-size: 32px;
