@@ -40,7 +40,7 @@
     font-family: "Nunito";
     font-weight: 400;
     color: rgba(0, 0, 0, 1);
-    margin: 10x;
+    margin: 10px;
   }
   
   .log_in_to {
@@ -52,7 +52,7 @@
     border-radius: 10px;
     padding: 10px;
     width: 500px;
-    margin: 10x;
+    margin: 10px;
   }
   
   .sign_up_an {
@@ -87,7 +87,7 @@
     font-family: "Nunito";
     font-weight: 400;
     color: rgba(0, 0, 0, 1);
-    margin: 10x;
+    margin: 10px;
     justify-content: center;
   }
   
