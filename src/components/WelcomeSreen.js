@@ -24,8 +24,10 @@ function WelcomeSreen() {
           
         <p className="sign_up_an">
         <div className="link-container">
-                      <Link to="/register" style={{ textDecoration: 'none', color: '#454545' }}>
+
+    <Link to="/register" style={{ textDecoration: 'none', color: 'gray;' }}>
                          
+
   <p className="register">Register</p>
   
       Sign up and begin using PeakReach
@@ -38,12 +40,12 @@ function WelcomeSreen() {
 
 <p className="log_in_to">
 <div className="link-container">
-                      <Link to="/login" style={{ textDecoration: 'none', color: '#454545' }}>
 
-    <div className="Raper">
+    <Link to="/login" style={{ textDecoration: 'none', color: 'gray;' }}>
+
+
   <p className="login">Login</p>
-   </div>
-
+  
       Log in to access PeakReach
       <br/> 
       Logistics for swift deliveries
