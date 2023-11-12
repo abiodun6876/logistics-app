@@ -40,6 +40,7 @@
     font-family: "Nunito";
     font-weight: 400;
     color: rgba(0, 0, 0, 1);
+    margin: 10x;
   }
   
   .log_in_to {
@@ -50,8 +51,8 @@
     background: #FFEFCE;
     border-radius: 10px;
     padding: 10px;
-    width: 100%;
-    
+    width: 500px;
+    margin: 10x;
   }
   
   .sign_up_an {
@@ -62,26 +63,32 @@
     background: #FFEFCE;
     border-radius: 10px;
     padding: 10px;
-    width: 100%;
+    width: 500px;
+    margin: 10px;
     
 
   }
   
   /* Add custom right arrow icon to the paragraphs using pseudo-elements */
-  .register::after,
-  .login::after {
-    content: '▶.';
+.register::after,
+.login::after {
+    content: '›'; /* or '&#9654;' */
     margin-left: 5px;
     float: right;
-    font-size: 20px;
+    font-size:40px;
+    font-weight: bold; /* Add this line for bold */
     color: rgba(0, 0, 0, 1);
-  }
+}
+
+
   
   .login {
     font-size: 32px;
     font-family: "Nunito";
     font-weight: 400;
     color: rgba(0, 0, 0, 1);
+    margin: 10x;
+    justify-content: center;
   }
   
   .loginImage {
@@ -93,40 +100,52 @@
     display: inline-block;
     height: 100%;
     vertical-align: middle;
+    width: 500px;
   }
   
 
 
-
-  /* Media query for smaller screens (e.g., mobile devices) */
-  @media (max-width: 768px) {
-    .register-container {
-      flex-direction: column; /* Stack items vertically for smaller screens */
-      align-items: center;
-    }
-  
-    .loginImage {
-      width: 100%; /* Make the image responsive to the screen width */
-      height: auto; /* Maintain image aspect ratio */
-      top: 0;
-      left: 0;
-    }
-  
-    .content {
-      margin: 20px;
-      text-align: center; /* Center text content for smaller screens */
-    }
-  
-    .welcome_to {
-      font-size: 36px; /* Reduce font size for smaller screens */
-    }
-  
-    .register, .login {
-      font-size: 24px; /* Reduce font size for smaller screens */
-    }
-  
-    .sign_up_an, .log_in_to {
-      font-size: 12px; /* Reduce font size for smaller screens */
-    }
+/* Media query for smaller screens (e.g., mobile devices) */
+@media (max-width: 768px) {
+  .register-container {
+    flex-direction: column; /* Stack items vertically for smaller screens */
+    align-items: center;
   }
-  
+
+  .loginImage {
+    width: 100%; /* Make the image responsive to the screen width */
+    height: auto; /* Maintain image aspect ratio */
+   
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .content1 {
+    margin: 20px;
+    text-align: center; /* Center text content for smaller screens */
+  }
+
+  .welcome_to {
+    font-size: 36px; /* Reduce font size for smaller screens */
+  }
+
+  .register, .login {
+    font-size: 24px; /* Reduce font size for smaller screens */
+    margin: 10px; /* Adjust margin as needed */
+    justify-content: center;
+  }
+
+  .log_in_to, .sign_up_an {
+    font-size: 12px; /* Reduce font size for smaller screens */
+    background: #FFEFCE;
+    border-radius: 10px;
+    padding: 10px;
+    width: 70%; /* Make the elements full width */
+  }
+
+  /* Remove the arrow icons for smaller screens */
+  .register::after,
+  .login::after {
+    content: none; /* Remove the arrow icons */
+  }
+}

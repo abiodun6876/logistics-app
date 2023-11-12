@@ -20,7 +20,7 @@ function Login() {
         try {
           // Make an Axios request to your endpoint with formData
           // Replace 'your_endpoint_url' with the actual endpoint URL
-          const response = await axios.post('https://peakreachdelivery.com/logistic/loginForm.php', formData);
+          const response = await axios.post('https://api.peakreachdelivery.com/api/v1//users/login', formData);
     
           // If the request is successful, display a success message
           setMessage('Form submitted successfully!', response.data);

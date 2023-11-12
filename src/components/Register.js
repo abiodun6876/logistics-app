@@ -1,28 +1,42 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import './Register.css';
 import axios from 'axios';
 
 function Register() {
-
+  const navigate = useNavigate();
+ 
     const [formData, setFormData] = useState({
-        firstName: '',
-        lastName: '',
+        first_name: '',
+        last_name: '',
         email: '',
-        phoneNumber: '',
+        phone: '',
+        password:'',
       });
+
       const [message, setMessage] = useState('');
       const [isModalOpen, setIsModalOpen] = useState(false);
     
       const handleFormSubmit = async (e) => {
         e.preventDefault();
+
+        // Convert first_name and last_name to lowercase in formData
+    setFormData({
+      ...formData,
+      first_name: formData.first_name.toLowerCase(),
+      last_name: formData.last_name.toLowerCase(),
+    });
     
         try {
           // Make an Axios request to your endpoint with formData
           // Replace 'your_endpoint_url' with the actual endpoint URL
-          const response = await axios.post('https://peakreachdelivery.com/logistic/registerForm.php', formData);
+          const response = await axios.post('https://api.peakreachdelivery.com/api/v1/users', formData);
     
           // If the request is successful, display a success message
           setMessage('Form submitted successfully!', response.data);
+          // If the request is successful, redirect to the login page
+          navigate('/login');
         } catch (error) {
           // If there's an error, display an error message
           setMessage('Form submission failed. Please try again later.');
@@ -66,20 +80,23 @@ function Register() {
           type="text"
           placeholder="First Name"
           className="form-input"
-          value={formData.firstName}
-          onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+          value={formData.first_name}
+          id="first_name"
+          onChange={(e) => setFormData({ ...formData,first_name: e.target.value })}
         />
         <input
           type="text"
           placeholder="Last Name"
           className="form-input"
-          value={formData.lastName}
-          onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+          id="last_name"
+          value={formData.last_name}
+          onChange={(e) => setFormData({ ...formData,last_name: e.target.value })}
         />
         <input
           type="email"
           placeholder="Email"
           className="form-input"
+          id="email"
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
         />
@@ -87,8 +104,18 @@ function Register() {
           type="tel"
           placeholder="Phone Number"
           className="form-input"
+          id="phone"
           value={formData.phoneNumber}
-          onChange={(e) => setFormData({ ...formData, phoneNumber: e.target.value })}
+          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+        />
+
+        <input
+          type="password"
+          placeholder="Password"
+          className="form-input"
+          id="password"
+          value={formData.password}
+          onChange={(e) => setFormData({ ...formData, password: e.target.value })}
         />
         <div style={{ display: 'flex', justifyContent: 'center', margin: '20px' }}>
           <button type="submit" className="next-button" onClick={handleFormSubmit}>
