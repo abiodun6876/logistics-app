@@ -24,7 +24,7 @@ function WelcomeSreen() {
           
         <p className="sign_up_an">
         <div className="link-container">
-                      <Link to="/register" style={{ textDecoration: 'none', color: 'black' }}>
+                      <Link to="/register" style={{ textDecoration: 'none', color: '#454545' }}>
                          
   <p className="register">Register</p>
   
@@ -38,7 +38,7 @@ function WelcomeSreen() {
 
 <p className="log_in_to">
 <div className="link-container">
-                      <Link to="/login" style={{ textDecoration: 'none', color: 'black' }}>
+                      <Link to="/login" style={{ textDecoration: 'none', color: '#454545' }}>
 
     <div className="Raper">
   <p className="login">Login</p>
