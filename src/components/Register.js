@@ -96,7 +96,7 @@ function Register() {
         <input
           type="text"
           placeholder="First Name"
-          className="form-input"
+          className="input"
           value={formData.first_name}
           id="first_name"
           onChange={(e) => setFormData({ ...formData,first_name: e.target.value })}
@@ -104,7 +104,7 @@ function Register() {
         <input
           type="text"
           placeholder="Last Name"
-          className="form-input"    
+          className="input"    
         id="last_name"
         value={formData.last_name}
         onChange={(e) => setFormData({ ...formData, last_name: e.target.value })}
@@ -112,7 +112,7 @@ function Register() {
         <input
           type="email"
           placeholder="Email"
-          className="form-input"
+          className="input"
           id="email"
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -120,7 +120,7 @@ function Register() {
         <input
           type="tel"
           placeholder="Phone Number"
-          className="form-input"
+          className="input"
           id="phone"
           value={formData.phoneNumber}
           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}

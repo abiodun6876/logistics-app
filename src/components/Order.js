@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
-
 import './Nav.css';
 import Nav from './Nav';
 import './Order.css';
+import '../App.css';
+
 
 function Order() {
     const [userData, setUserData] = useState(null);
     const [formData, setFormData] = useState({
         parcelSize: '',
         pickupLocation: '',
+        receiver_details: '',
         receiverName: '',
         receiverPhone: '',
-        receiver_location:'',
-        receiver_details:'',
+        receiver_location: '',
     });
 
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -22,9 +23,7 @@ function Order() {
     useEffect(() => {
         const fetchUserProfile = async () => {
             try {
-                const authToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJzL25pY2hvQGdtYWlsLmNvbSIsInVpZCI6IiIsImlzcyI6InBlYWstc2VydmljZS1wYXNzd29yZC1yZXNldCIsImV4cCI6MTY5MTA5MzM5MSwibmJmIjoxNjkxMDkyNzkxLCJpYXQiOjE2OTEwOTI3OTF9.O7J8cQCJxYUVov5WffUtgIN9RzUZWhbTplTN3Sxk7wY';
-
-
+                const authToken = 'YOUR_AUTH_TOKEN';  // Replace with your actual auth token
 
                 const response = await fetch('https://api.peakreachdelivery.com/api/v1/users/profile', {
                     method: 'GET',
@@ -72,11 +71,10 @@ function Order() {
                 <p className="userName">Hi {userData.username},</p>
             )}
             <form className="form">
-            <div className="form-columns">
-                <div className="container">
-                    <h2 className="new_order">New Order</h2>
-                    <p className="fill_the_f">Fill the form provided below with the necessary details to initiate <br /> the process of creating a new order.</p>
-                   
+                <div className="form-columns grid grid-cols-2 gap-8">
+                    <div className="container">
+                        <h2 className="new_order">New Order</h2>
+                        <p className="fill_the_f">Fill the form provided below with the necessary details to initiate <br /> the process of creating a new order.</p>
                         {/* Column 1 */}
                         <div className="form-column">
                             <input
@@ -88,12 +86,10 @@ function Order() {
                                 value={formData.parcelSize}
                                 onChange={(e) => setFormData({ ...formData, parcelSize: e.target.value })}
                             />
-
                             <div className="info-container">
                                 <img className="info" src="assets/images/info.png" style={{ width: '20px', height: '20px' }} alt="info" />
                                 <p className="how_do_i_k">How do I know my parcel size?</p>
                             </div>
-
                             <div className="coolinput">
                                 <label htmlFor="input" className="text">Pickup location</label>
                                 <input
@@ -105,7 +101,6 @@ function Order() {
                                     onChange={(e) => setFormData({ ...formData, pickupLocation: e.target.value })}
                                 />
                             </div>
-
                             <input
                                 type="text"
                                 className="input"
@@ -115,15 +110,13 @@ function Order() {
                                 value={formData.receiver_details}
                                 onChange={(e) => setFormData({ ...formData, receiver_details: e.target.value })}
                             />
-                            </div>
-                       
-
+                        </div>
                         {/* Column 2 */}
                         <div className="form-column">
                             <h3 className="receiver-details-header">Receiver Details</h3>
                             <p className="fill_the_f">
-                            Please provide the receiver's details.<br /> Tap the receiver detail field in the form to select from saved receivers
-                                </p>
+                                Please provide the receiver's details.<br /> Tap the receiver detail field in the form to select from saved receivers
+                            </p>
                             <input
                                 type="text"
                                 className="input"
@@ -142,8 +135,7 @@ function Order() {
                                 value={formData.receiverPhone}
                                 onChange={(e) => setFormData({ ...formData, receiverPhone: e.target.value })}
                             />
-                          
-                          <input
+                            <input
                                 type="adderess"
                                 className="input"
                                 placeholder="Pickup location"
@@ -152,18 +144,16 @@ function Order() {
                                 value={formData.receiver_location}
                                 onChange={(e) => setFormData({ ...formData, receiver_location: e.target.value })}
                             />
+
+                        
                             {/* Add other Receiver details */}
                             <button type="button" onClick={handleFormSubmit}>
-                        Next
-                    </button>
-                        </div>
+                                Next
+                            </button>
                         </div>
                     </div>
-              
-                    
-            
+                </div>
             </form>
-
             {/* Modal for displaying success/error messages */}
             {isModalOpen && (
                 <div className="modal">

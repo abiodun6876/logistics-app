@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Login.css';
+//import './Login.css';
 import './ForgetPassword.css';
 //import { Link } from "react-router-dom";
           
@@ -65,7 +65,7 @@ function ForgetPassword() {
 
                     
 
-                    <form className="form">
+                    <form className="form" style={{backgroundColor:'#FFEFCE',boxShadow:'none'}}>
 
                         <>
                             {/* pagination */}
