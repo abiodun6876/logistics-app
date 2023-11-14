@@ -145,9 +145,9 @@ function Order() {
                           <input
                                 type="adderess"
                                 className="input"
-                                placeholder="receiver_location"
+                                placeholder="Pickup location"
                                 id="receiver_location"
-                                name="Pickup location"
+                                name="receiver_location"
                                 value={formData.receiver_location}
                                 onChange={(e) => setFormData({ ...formData, receiver_location: e.target.value })}
                             />
