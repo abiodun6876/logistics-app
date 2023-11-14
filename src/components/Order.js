@@ -71,7 +71,7 @@ function Order() {
                 <p className="userName">Hi {userData.username},</p>
             )}
             <form className="form">
-                <div className="form-columns grid grid-cols-2 gap-8">
+                <div className="form-columns">
                     <div className="container">
                         <h2 className="new_order">New Order</h2>
                         <p className="fill_the_f">Fill the form provided below with the necessary details to initiate <br /> the process of creating a new order.</p>

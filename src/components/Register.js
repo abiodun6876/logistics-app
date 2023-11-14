@@ -58,8 +58,7 @@ function Register() {
 
     return (
 
-        <form className="form">
-            <div className="flex-column">  
+        
     <div className="register-container">
       <img src="/assets/images/rafiki.png" className="loginImage" alt="Rafiki" />
       <div className="big-container">
@@ -90,7 +89,8 @@ function Register() {
 
 
 
-
+            <form className="form">
+           
 
         {/* Add input fields with 'onChange' handlers to update 'formData' */}
         <input
@@ -134,7 +134,8 @@ function Register() {
             Next
           </button>
                             </div>
-      
+                        
+                            </form>
 
       {/* Modal for displaying success/error messages */}
       {isModalOpen && (
@@ -151,8 +152,8 @@ function Register() {
         </div>
       </div>
                 </div>
-            </div>
-        </form>
+           
+      
 
     );
 }
