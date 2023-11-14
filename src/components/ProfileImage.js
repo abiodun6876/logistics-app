@@ -53,9 +53,9 @@ function ProfileImage() {
     return (
         <form className="form">
            
-            <div className="container1">
+            <div className="register-container ">
                 <img src="/assets/images/rafiki.png" className="sideImage" alt="Rafiki" />
-                <div className="center-container">
+                <div className="content">
 
                     <div className="center-container">
                         <img
