@@ -1,0 +1,149 @@
+/* Default styles for larger screens */
+.container1 {
+    display: flex;
+    align-items: self-start;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.content2 {
+    display: flex;
+    margin: 20px;
+    background: #FFEFCE;
+    text-align: left;
+    padding: 12px 20px;
+}
+
+.register {
+    font-size: 32px;
+    font-family: "Nunito";
+    font-weight: 700;
+    color: rgba(0, 0, 0, 1);
+    padding: 12px 20px;
+    text-align: left;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #555;
+    margin: 0 5px;
+}
+
+.active {
+    background-color: #ffae0a;
+}
+
+
+
+.sideImage {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+.sideImage {
+    width: 646px;
+    height: 481.35px;
+    top: 220px;
+    left: 46px;
+}
+
+
+
+.center-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #FFEFCE;
+}
+
+    .center-container .image {
+        width: 114px;
+        height: 114px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+        .center-container .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+    .center-container .image-options {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+        .center-container .image-options p {
+            margin: 0;
+            cursor: pointer;
+            color: #FFAE0A;
+        }
+
+.image-options p {
+    margin: 10px 0;
+    cursor: pointer;
+    color: #FFAE0A;
+    gap: 20px;
+}
+
+/* Previous and Next Buttons */
+.buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+    gap: 20px;
+}
+
+.next-button {
+    background-color: #FFAE0A;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* Media query for smaller screens (e.g., mobile devices) */
+@media (max-width: 768px) {
+    .content2 {
+        flex-direction: column; /* Stack the content in a column on smaller screens */
+        align-items: center; /* Center the content horizontally */
+        text-align: center; /* Center the text */
+        padding: 12px; /* Adjust padding as needed */
+    }
+
+   
+    .sideImage {
+        width: 100%; /* Make the sideImage responsive to the screen width */
+        height: auto; /* Maintain image aspect ratio */
+        top: 0; /* Adjust the top positioning as needed */
+        left: 0; /* Adjust the left positioning as needed */
+    }
+
+    .center-container .image-options {
+        flex-direction: column; /* Stack the image options in a column on smaller screens */
+    }
+
+    .buttons-container {
+        flex-direction: column; /* Stack the buttons in a column on smaller screens */
+        align-items: center; /* Center the buttons horizontally */
+    }
+}

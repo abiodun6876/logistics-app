@@ -1,9 +1,76 @@
+
+.flex-column > label {
+    color: #151717;
+    font-weight: 600;
+}
+
+.inputForm {
+    border: 1.5px solid #ecedec;
+    border-radius: 10px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    transition: 0.2s ease-in-out;
+}
+
+.input {
+    margin-left: 10px;
+    border-radius: 10px;
+    border: none;
+    width: 80%;
+    height: 100%;
+    border: 1.5px solid #ecedec;
+    border-radius: 10px;
+    height: 50px;
+}
+
+    .input:focus {
+        outline: none;
+    }
+
+.inputForm:focus-within {
+    border: 1.5px solid #2d79f3;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+    .flex-row > div > label {
+        font-size: 14px;
+        color: black;
+        font-weight: 400;
+    }
+
+
+
+
 /* Default styles for larger screens */
 .register-container {
     display: flex;
     align-items: center;
   }
-  
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px;
+    background: #FFEFCE;
+    padding: 12px 20px;
+}
+
+
+
+
+
+
   .loginImage {
     width: 646px;
     height: 481.35px;
@@ -20,45 +87,40 @@
       left: 0; /* Adjust the left positioning as needed */
     }
   }
-  
-  .content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 20px;
-    background: #FFEFCE;
-    padding: 12px 20px; 
-  }
-  
-  .welcome_to {
+
+
+
+.welcome_to {
     font-size: 48px;
     font-family: "Nunito";
     font-weight: 800;
     color: rgba(0, 0, 0, 1);
-    padding: 12px 20px; 
-  }
-  
-  .register {
-    font-size: 32px;
-    font-family: "Nunito";
-    font-weight: 700;
-    color: rgba(0, 0, 0, 1);
-    padding: 12px 20px; 
-   
-  }
-  
+    padding: 12px 20px;
+    text-align: left; /* Add this line to align the text to the left */
+}
 
-  
-  
-  
-  
-  
-  .login {
+.register {
     font-size: 32px;
     font-family: "Nunito";
     font-weight: 700;
     color: rgba(0, 0, 0, 1);
-  }
+    padding: 12px 20px;
+    text-align: left; /* Add this line to align the text to the left */
+}
+
+
+
+
+
+
+
+.login {
+    font-size: 32px;
+    font-family: "Nunito";
+    font-weight: 700;
+    color: rgba(0, 0, 0, 1);
+    text-align: left; /* Add this line to align the text to the left */
+}
   
   .loginImage {
     width: 646px;
@@ -69,17 +131,17 @@
 
   /* Default styles for larger screens */
 .form-input {
-    width: 540px;
-    height: 54px;
-    padding: 12px 20px;
-    border-radius: 10px;
-    border: 1px solid #000;
-  }
+    display: flex;
+    flex-direction: column;
+    position: static;
+    max-width: 800px;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    margin-left: 0; /* Align to the left */
+}
   
-  /* Add spacing between input fields using margin */
-  .form-input + .form-input {
-    margin-top: 10px;
-  }
+
 
 
 /* Style for the modal container */
@@ -175,4 +237,24 @@
       font-size: 12px; /* Reduce font size for smaller screens */
     }
   }
-  
+
+
+
+.pagination {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-top: 20px; /* Add top margin for spacing */
+}
+
+.circle {
+    width: 12px; /* Adjust the size of the circle */
+    height: 12px;
+    border-radius: 50%;
+    background-color: #555; /* Adjust the background color */
+    margin: 0 5px; /* Add some margin between circles */
+}
+
+.active {
+    background-color: #ffae0a; /* Change the background color for the active circle */
+}

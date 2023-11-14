@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import './Login.css';
-import { Link } from "react-router-dom";
+import './ForgetPassword.css';
+//import { Link } from "react-router-dom";
           
 import axios from 'axios';
 
 function ForgetPassword() {
-
     const [formData, setFormData] = useState({
-        
-        email: '',
         Password: '',
-      });
+        VerificationCode: '4062', // Initialize with four underscores or an empty string
+    });
+
       const [message, setMessage] = useState('');
       const [isModalOpen, setIsModalOpen] = useState(false);
     
@@ -20,8 +20,8 @@ function ForgetPassword() {
         try {
           // Make an Axios request to your endpoint with formData
           // Replace 'your_endpoint_url' with the actual endpoint URL
-          const response = await axios.post('https://peakreachdelivery.com/logistic/ForgetPassword.php', formData);
-    
+            const response = await axios.post('https://api.peakreachdelivery.com/api/v1/users/users/forgot-password', formData);
+            
           // If the request is successful, display a success message
           setMessage('Form submitted successfully!', response.data);
         } catch (error) {
@@ -37,7 +37,10 @@ function ForgetPassword() {
 
 
 
-  return (
+    return (
+
+
+
     <div className="register-container">
       <img src="/assets/images/rafiki.png" className="loginImage" alt="Rafiki" />
       <div className="big-container">
@@ -51,8 +54,8 @@ function ForgetPassword() {
             alt="logo"
           />
           <div className="d-flex gap-3">
-            <p className="login">Login</p>
-            <p className='Sub-text'>Log in to access peakreach logistics for swift deliveries</p>
+                        <p className="forgot_pas">Forgot password</p>
+                        <p className='Sub-text'>Enter the verification code sent to your email foobarbaz@gmail.com</p>
           </div>
 
           
@@ -60,32 +63,90 @@ function ForgetPassword() {
 
 
 
+                    
 
-          <form style={{ borderRadius: '10px', padding: '20px', margin: '20px', background: '#FFEFCE' }}>
-        {/* Add input fields with 'onChange' handlers to update 'formData' */}
-       
-        
-       
+                    <form className="form">
 
-<input
-  type= "password"
-  placeholder="New Password"
-  className="form-input"
-  value={formData.Password}
-  onChange={(e) => setFormData({ ...formData, Password: e.target.value })}
-/>
+                        <>
+                            {/* pagination */}
+                            <div className="pagination">
+                                
+                                <div className="circle"></div>
+                                <div className="circle active"></div>
+                                <div className="circle"></div>
+                            </div>
+                        </>
+                        <div className="content">
+                            {/* Password reset verification inputs */}
+                            <div className="inp">
 
 
+                               
+
+                                <input
+                                    maxLength="1"
+                                    className="input2"
+                                    type="text"
+                                    placeholder=""
+                                    value={formData.VerificationCode[0]}
+                                    onChange={(e) =>
+                                        setFormData({
+                                            ...formData,
+                                            VerificationCode: e.target.value + formData.VerificationCode.slice(1),
+                                        })
+                                    }
+                                />
+                                <input
+                                    maxLength="1"
+                                    className="input2"
+                                    type="text"
+                                    placeholder=""
+                                    value={formData.VerificationCode[1]}
+                                    onChange={(e) =>
+                                        setFormData({
+                                            ...formData,
+                                            VerificationCode: formData.VerificationCode[0] + e.target.value + formData.VerificationCode.slice(2),
+                                        })
+                                    }
+                                />
+                                <input
+                                    maxLength="1"
+                                    className="input2"
+                                    type="text"
+                                    placeholder=""
+                                    value={formData.VerificationCode[2]}
+                                    onChange={(e) =>
+                                        setFormData({
+                                            ...formData,
+                                            VerificationCode: formData.VerificationCode.slice(0, 2) + e.target.value + formData.VerificationCode.slice(3),
+                                        })
+                                    }
+                                />
+                                <input
+                                    maxLength="1"
+                                    className="input2"
+                                    type="text"
+                                    placeholder=""
+                                    value={formData.VerificationCode[3]}
+                                    onChange={(e) =>
+                                        setFormData({
+                                            ...formData,
+                                            VerificationCode: formData.VerificationCode.slice(0, 3) + e.target.value,
+                                        })
+                                    }
+                                />
+                            </div>                             
+                                         
 
 
         <div style={{ display: 'flex', justifyContent: 'center', margin: '20px' }}>
           <button type="submit" className="next-button" onClick={handleFormSubmit}>
-            Login
+            Next
           </button>
           
-        
-        </div>
-      </form>
+                            </div></div>
+                                        </form>
+
 
 
       {/* Modal for displaying success/error messages */}
@@ -102,7 +163,9 @@ function ForgetPassword() {
 
         </div>
       </div>
-    </div>
+                                    </div>
+
+
     );
 }
 

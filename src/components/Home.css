@@ -1,177 +1,62 @@
-.one {
-    font-size: 50px;
-   font-family: "Rubik";
-   font-weight: 600;
-   color: rgba(255, 174, 10, 1);
-   width: 120px;
-   height: 59px;
-}
-
-.three {
-    font-size: 50px;
-   font-family: "Rubik";
-   font-weight: 600;
-   color: rgba(255, 174, 10, 1);
-   width: 129px;
-   height: 59px;
-}
-
-
-
-
-.image-container {
-   
-    background-size: cover;
-    position: relative; /* Needed to position the cutout text in the middle of the image */
-    height: 300px; /* Some height */
-  }
-  
-  .text {
-    background-color: white;
-    color: black;
-    font-size: 10vw; /* Responsive font size */
-    font-weight: bold;
-    margin: 0 auto; /* Center the text container */
-    padding: 10px;
-    width: 60%;
-    text-align: center; /* Center text */
-    position: absolute; /* Position text */
-    top: 50%; /* Position text in the middle */
-    left: 50%; /* Position text in the middle */
-    transform: translate(-50%, -50%); /* Position text in the middle */
-    mix-blend-mode: screen; /* This makes the cutout text possible */
-  }
-
-
-
-  * {
-    box-sizing: border-box;
-  }
-  
-  ul.list-group {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  
-  }
-  
-  ul.list-group li {
-    border: 1px solid #ddd;
-    margin-top: -1px; /* Prevent double borders */
-    background-color: #f6f6f6;
-    padding: 12px;
-    font-size: 20px;
-    font-family: "League Spartan";
-    font-weight: 400;
-    color: rgba(255, 174, 10, 1);
-    align-items:left;
-
-  }
-  
-  ul.list-group .badge {
-    background-color: rgba(255, 174, 10, 1);
-    color: #fff;
-    font-weight: bold;
-    
-    padding: 5px 10px;
-    text-align: center;
-    float: right;
-  }
-
-  .transporti {
-    font-size: 35px;
-   font-family: "Rubik";
-   font-weight: 600;
-   color: rgb(0, 0, 0);
-   
-  }
-
-  .transporti ::before, .transporti ::after {
-    flex: 1;
-    content: '';
-    padding: 3px;
-    background-color: rgba(255, 174, 10, 1);
-    margin: 5px;
-  }
-
-
-
-  .card-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: -10px; /* Negative margin to compensate for padding */
-  }
-  
-  .card {
-    width: calc(33.333% - 20px); /* 33.333% width for each card with spacing */
-    text-align: left;
-    padding: 10px;
-    margin: 10px; /* Add margin to create spacing between cards */
-    position: relative;
-  }
-  
-  .card img {
-    width: 100%;
-    display: block; /* Remove any residual image space */
-  }
-  
-  .card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(250, 167, 1, 0.8)); /* Adjust the alpha (opacity) values */
-   
-    pointer-events: none;
-  }
-  
-  .card-text {
-    color: rgb(0, 0, 0);
-    font-size: 16px;
-    font-family: "Krub";
-    font-weight: 500;
-    margin-top: auto;
-  }
-  
-  .title {
-    margin: 0;
-    position: relative;
-    z-index: 1; /* Set a higher z-index value to place it above the gradient background */
-  }
-  
-  .subtitle {
-    margin: 0;
-    margin-top: 5px;
-    color: rgb(255, 255, 255);
-    position: relative;
-    z-index: 1; /* Set a higher z-index value to place it above the gradient background */
-  }
-  
-  
-  .view-more {
-    background-color: rgba(0, 0, 0, 1);
-    color: #fff;
-    border: none;
-    padding: 10px;
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-margin-top: auto;
-   
-  }
-
-  body {
+body {
     overflow-x: hidden;
-  }
-  
+}
 
-/* Media Query for Mobile */
-@media (max-width: 768px) {
-    .card {
-      width: 100%; /* Show each card in a single column on smaller screens */
+.container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.userName {
+    font-size: 34px;
+    font-family: "Nunito";
+    font-weight: 700;
+    color: rgba(0, 0, 0, 1);
+    width: 192px;
+    height: 66px;
+}
+
+.graybox {
+    /* Add any styles you need for the graybox image */
+}
+
+.send_a_pac {
+    font-size: 32px;
+    font-family: "Nunito";
+    font-weight: 700;
+    color: rgba(0, 0, 0, 1);
+    width: 234px;
+    height: 48px;
+}
+
+.our_dedica {
+    font-size: 16px;
+    font-family: "Nunito";
+    font-weight: 400;
+    color: rgba(0, 0, 0, 1);
+    width: 408px;
+    height: 48px;
+}
+
+.createOrder {
+    background-color: #ffae0a; /* orange background color */
+    border: none; /* Remove borders */
+    color: black; /* black text color */
+    padding: 15px 32px; /* Padding inside the button */
+    text-align: center; /* Center text horizontally */
+    text-decoration: none; /* Remove underline from text */
+    display: inline-block; /* Display as inline-block to adjust width to content */
+    font-size: 16px; /* Set the font size */
+    margin-top: 20px; /* Add some margin at the top */
+    cursor: pointer; /* Add a cursor pointer on hover */
+    border-radius: 5px; /* Add rounded corners */
+}
+
+    .createOrder:hover {
+        background-color: #45a049; /* Darker green color on hover */
     }
-  }
-  
+
+

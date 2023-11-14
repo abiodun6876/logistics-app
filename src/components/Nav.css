@@ -1,20 +1,41 @@
+body {
+    overflow-x: hidden;
+}
+
 .navbar {
-    background-color: #FFAE0A;
+    background-color:white; /* white background color */
     height: 80px;
+    
+   
+}
+
+.logo-container {
     display: flex;
-    justify-content: flex-start; /* Change 'start' to 'flex-start' */
-    align-items: center;
-  }
+    align-items: center; /* Align items vertically in the center */
+    justify-content: space-between; /* Spread items horizontally with space in-between */
+}
+
+.short-logo {
+    width: 400px; /* Default width for larger screens */
+    height: auto; /* Maintain the aspect ratio */
+    margin-left: 10px; /* Add some left margin for spacing */
   
-  
-  .menu-bars {
-    margin-left: 2rem;
-    font-size: 2rem;
-    background: none;
-  }
-  
-  .nav-menu {
-    background-color: #FFAE0A;
+}
+
+
+
+
+
+.menu-toggle {
+    margin-left: auto; /* Move .menu-toggle to the right by using 'auto' margin on the left */
+}
+
+
+
+
+
+.nav-menu {
+    background-color: #ffae0a; /* orange background color */
     width: 250px;
     height: 100vh;
     display: flex;
@@ -24,7 +45,7 @@
     left: -100%;
     transition: 850ms;
     z-index: 1; /* Add this line to set a higher z-index */
-  }
+}
   
   .nav-menu.active {
     left: 0;
@@ -53,35 +74,23 @@
     padding: 0 16px;
     border-radius: 4px;
   }
-  
-  .nav-text a:hover {
-    background-color: #FFDA56;
-  }
+
+    .nav-text a:hover {
+        background-color: #ffae0a; /* orange background color */
+    }
   
   .nav-menu-items {
     width: 100%;
   }
-  
-  .navbar-toggle {
-    background-color: #FFAE0A;
-    width: 100%;
-    height: 80px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  
-  span {
-    margin-left: 16px;
-  }
+
+
 
 
 
   
 /* Additional styles for desktop navigation */
 .desktop-nav {
-    display: flex;
-    align-items: center;
+   
     display: none; /* Hide desktop navigation by default */
   }
   
@@ -91,14 +100,17 @@
     font-size: 18px;
     padding: 0 16px;
   }
+
+    .desktop-nav a:hover {
+        background-color:wheat; /* orange background color */
+    }
   
-  .desktop-nav a:hover {
-    background-color:#FFDA56;
-  }
-  
-  /* You can add more styles specific to desktop navigation as needed */
   @media (min-width: 768px) {
     .desktop-nav {
       display: flex; /* Show desktop navigation on screens wider than 768px */
     }
+
+   
+
+
   }
