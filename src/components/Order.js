@@ -147,7 +147,7 @@ function Order() {
                                 className="input"
                                 placeholder="receiver_location"
                                 id="receiver_location"
-                                name="receiver_location"
+                                name="Pickup location"
                                 value={formData.receiver_location}
                                 onChange={(e) => setFormData({ ...formData, receiver_location: e.target.value })}
                             />
