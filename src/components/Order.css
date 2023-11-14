@@ -31,16 +31,20 @@
     margin-left: 0; /* Align to the left */
 }
 
-
 .form-columns {
     display: flex;
-    justify-content: space-between;
     gap: 20px;
 }
 
 .form-column {
     flex: 1;
 }
+
+
+
+
+
+
 
 .receiver-details-header {
    

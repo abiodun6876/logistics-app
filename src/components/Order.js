@@ -72,10 +72,11 @@ function Order() {
                 <p className="userName">Hi {userData.username},</p>
             )}
             <form className="form">
+            <div className="form-columns">
                 <div className="container">
                     <h2 className="new_order">New Order</h2>
                     <p className="fill_the_f">Fill the form provided below with the necessary details to initiate <br /> the process of creating a new order.</p>
-                    <div className="form-columns">
+                   
                         {/* Column 1 */}
                         <div className="form-column">
                             <input
@@ -114,7 +115,7 @@ function Order() {
                                 value={formData.receiver_details}
                                 onChange={(e) => setFormData({ ...formData, receiver_details: e.target.value })}
                             />
-
+                            </div>
                        
 
                         {/* Column 2 */}
@@ -156,10 +157,11 @@ function Order() {
                         Next
                     </button>
                         </div>
+                        </div>
                     </div>
-                    </div>
+              
                     
-                </div>
+            
             </form>
 
             {/* Modal for displaying success/error messages */}
