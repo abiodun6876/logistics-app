@@ -31,15 +31,38 @@
     margin-left: 0; /* Align to the left */
 }
 
+
+.form-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.form-column {
+    flex: 1;
+}
+
+.receiver-details-header {
+   
+    font-family: "Nunito";
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 42px;
+    letter-spacing: 0px;
+    text-align: left;
+}    
+
+
 input {
     display: flex;
     flex-direction: column;
     position: static;
-    max-width: 800px;
+    width: 800px;
     padding: 10px;
     margin-bottom: 15px;
     box-sizing: border-box;
     margin-left: 0; /* Align to the left */
+    gap:45px;
   
 }
 

@@ -12,6 +12,8 @@ function Order() {
         pickupLocation: '',
         receiverName: '',
         receiverPhone: '',
+        receiver_location:'',
+        receiver_details:'',
     });
 
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -64,80 +66,101 @@ function Order() {
     };
 
     return (
-      <>
+        <>
             <Nav />
-       
-
-
             {userData && (
                 <p className="userName">Hi {userData.username},</p>
             )}
-         
-
-           
             <form className="form">
-                  
-            <div className="container">
-                <h2 className="new_order">New Order</h2>
-                <p className="fill_the_f">Fill the form provided below with the necessary details
-                    to initiate  <br /> the process of creating a new order.</p>
-               
-                <input
-                    type="text"
-                    className="input"
-                    placeholder="Parcel Size"
-                    id="parcelSize"
-                    name="parcelSize"
-                    value={formData.parcelSize}
-                    onChange={(e) => setFormData({ ...formData, parcelSize: e.target.value })}
-                />
+                <div className="container">
+                    <h2 className="new_order">New Order</h2>
+                    <p className="fill_the_f">Fill the form provided below with the necessary details to initiate <br /> the process of creating a new order.</p>
+                    <div className="form-columns">
+                        {/* Column 1 */}
+                        <div className="form-column">
+                            <input
+                                type="text"
+                                className="input"
+                                placeholder="Parcel Size"
+                                id="parcelSize"
+                                name="parcelSize"
+                                value={formData.parcelSize}
+                                onChange={(e) => setFormData({ ...formData, parcelSize: e.target.value })}
+                            />
 
-                <div className="info-container">
-                    <img className="info" src="assets/images/info.png" style={{ width: '20px', height: '20px' }} alt="info" />
-                    <p className="how_do_i_k">How do I know my parcel size?</p>
-                </div>
+                            <div className="info-container">
+                                <img className="info" src="assets/images/info.png" style={{ width: '20px', height: '20px' }} alt="info" />
+                                <p className="how_do_i_k">How do I know my parcel size?</p>
+                            </div>
 
-                <div className="coolinput">
-                    <label htmlFor="input" className="text">Pickup location</label>
-                    <input
-                        type="text"
-                        placeholder="2972 Westheimer Rd. Santa Ana, Illinois 85486"
-                        name="pickupLocation"
-                        className="input"
-                        value={formData.pickupLocation}
-                        onChange={(e) => setFormData({ ...formData, pickupLocation: e.target.value })}
-                    />
-                </div>
+                            <div className="coolinput">
+                                <label htmlFor="input" className="text">Pickup location</label>
+                                <input
+                                    type="text"
+                                    placeholder="2972 Westheimer Rd. Santa Ana, Illinois 85486"
+                                    name="pickupLocation"
+                                    className="input"
+                                    value={formData.pickupLocation}
+                                    onChange={(e) => setFormData({ ...formData, pickupLocation: e.target.value })}
+                                />
+                            </div>
 
-                <input
-                    type="text"
-                    className="input"
-                    placeholder="Receiver Name"
-                    id="receiverName"
-                    name="receiverName"
-                    value={formData.receiverName}
-                    onChange={(e) => setFormData({ ...formData, receiverName: e.target.value })}
-                />
+                            <input
+                                type="text"
+                                className="input"
+                                placeholder="Receiver Details"
+                                id="receiver_details"
+                                name="receiver_details"
+                                value={formData.receiver_details}
+                                onChange={(e) => setFormData({ ...formData, receiver_details: e.target.value })}
+                            />
 
-                <input
-                    type="tel"
-                    className="input"
-                    placeholder="Receiver Phone"
-                    id="receiverPhone"
-                    name="receiverPhone"
-                    value={formData.receiverPhone}
-                    onChange={(e) => setFormData({ ...formData, receiverPhone: e.target.value })}
-                />
+                       
 
-                <button type="button" onClick={handleFormSubmit}>
-                    Next
-                </button>
+                        {/* Column 2 */}
+                        <div className="form-column">
+                            <h3 className="receiver-details-header">Receiver Details</h3>
+                            <p className="fill_the_f">
+                            Please provide the receiver's details.<br /> Tap the receiver detail field in the form to select from saved receivers
+                                </p>
+                            <input
+                                type="text"
+                                className="input"
+                                placeholder="Receiver Name"
+                                id="receiverName"
+                                name="receiverName"
+                                value={formData.receiverName}
+                                onChange={(e) => setFormData({ ...formData, receiverName: e.target.value })}
+                            />
+                            <input
+                                type="tel"
+                                className="input"
+                                placeholder="Receiver Phone"
+                                id="receiverPhone"
+                                name="receiverPhone"
+                                value={formData.receiverPhone}
+                                onChange={(e) => setFormData({ ...formData, receiverPhone: e.target.value })}
+                            />
+                          
+                          <input
+                                type="adderess"
+                                className="input"
+                                placeholder="receiver_location"
+                                id="receiver_location"
+                                name="receiver_location"
+                                value={formData.receiver_location}
+                                onChange={(e) => setFormData({ ...formData, receiver_location: e.target.value })}
+                            />
+                            {/* Add other Receiver details */}
+                            <button type="button" onClick={handleFormSubmit}>
+                        Next
+                    </button>
+                        </div>
                     </div>
-               
-           
-                    </form>
-   
-
+                    </div>
+                    
+                </div>
+            </form>
 
             {/* Modal for displaying success/error messages */}
             {isModalOpen && (
