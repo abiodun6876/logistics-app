@@ -129,7 +129,7 @@ function Register() {
        
 
 
-        <div style={{ display: 'flex', justifyContent: 'center', margin: '20px' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', margin: '20px',color:'orange', }}>
           <button type="submit" className="next-button" onClick={handleFormSubmit}>
             Next
           </button>
