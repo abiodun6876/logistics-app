@@ -147,7 +147,7 @@ function Order() {
 
                         
                             {/* Add other Receiver details */}
-                            <button type="button" onClick={handleFormSubmit}>
+                            <button type="button" style={{color:'orange',}} onClick={handleFormSubmit}>
                                 Next
                             </button>
                         </div>
